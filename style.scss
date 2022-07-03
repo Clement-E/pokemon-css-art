@@ -1,0 +1,53 @@
+@font-face {font-family: "Pokemon"; src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot"); src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg"); } 
+
+body {
+  --carte-largeur: 460px;
+  --carte-hauteur: 650px;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+
+  #base {
+    width: 500px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    //display:none;
+  }
+  #carte {
+    box-sizing: border-box;
+    width: var(--carte-largeur);
+    height: var(--carte-hauteur);
+    background-color: #AC234550;
+    position: relative;
+    left: 22px;
+    z-index: 2;
+    border-radius: 18px;
+    border: 16px rgb(41, 40, 40) solid;
+    &::after {
+      content: "@2022 Pokemon / NINTENDO / Creatures";
+      font-size: 10px;
+      color: rgb(199, 196, 196);
+      position: absolute;
+      bottom: -14px;
+      right: 12px;
+    }
+    .tete {
+      .oreille-dte {
+        //display: none;
+        width: 400px;
+        height: 60px;
+        overflow: hidden;
+        background: rgb(82,57,109);
+        box-shadow: inset -5px 12px 2px rgba(40,154,226,0.2);
+        border-radius: 60%;
+        transform: rotate(60deg);
+        position: relative;
+        top: 155px;
+        left: 32px;
+        clip-path: polygon(0px 20px, 110px 8px, 90px 60px, 0px 60px);
+      }
+    }
+  }
+}  
